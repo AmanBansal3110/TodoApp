@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .sign-in-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #2e0249 30%, #570a57 60%, #a91079);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .sign-in-card {
+    background-color: rgba(20, 20, 40, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .sign-in-title {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .sign-in-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+  }
+  
+  .sign-in-input:focus {
+    outline: none;
+    border-color: #a91079;
+    box-shadow: 0 0 10px rgba(169, 16, 121, 0.5);
+  }
+  
+  .full-width {
+    width: calc(100% - 30px);
+  }
+  
+  .sign-in-button {
+    background-color: #a91079;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .sign-in-button:hover {
+    background-color: #570a57;
+  }
+  
+  .sign-in-footer {
+    color: #bbb;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .sign-in-link {
+    color: #a91079;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .sign-in-link:hover {
+    text-decoration: underline;
+  }
+  

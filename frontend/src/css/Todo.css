@@ -1,0 +1,46 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Gradient background for the whole page */
+.bg-gradient {
+  background: linear-gradient(135deg, #2e0249 30%, #570a57 60%, #a91079);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Card styling */
+.bg-gray-900 {
+  background-color: rgba(20, 20, 40, 0.9);
+}
+
+/* Input field and button styling */
+input {
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #570a57;
+}
