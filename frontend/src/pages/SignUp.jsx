@@ -30,7 +30,7 @@ function SignUp() {
         const errorData = await response.json(); // or response.text() based on server response
         throw new Error(errorData.error || 'Registration failed');
       }
-  
+      
      // Parse the response as text
     navigate('/home'); 
     

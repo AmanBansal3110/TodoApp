@@ -7,6 +7,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const dotenv = require('dotenv').config(); 
 
 app.use(cors({
     origin: 'http://localhost:5173', // Frontend origin
@@ -23,7 +24,7 @@ function isLoggedIn(req, res, next) {
     }
 
     try {
-        let data = jwt.verify(req.cookies.token, 'shhhh');
+        let data = jwt.verify(req.cookies.token, process.env.JWT_SECRET);
         req.user = data;
         next();
     } catch (e) {

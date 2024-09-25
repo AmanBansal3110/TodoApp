@@ -1,7 +1,16 @@
 const mongoose = require('mongoose');
+const config = require('config')
 
-mongoose.connect('mongodb://127.0.0.1:27017/project')
-
+const connectDB = async () =>{
+    try{
+        await mongoose.connect(`${config.get("MONGODB_URI")}`);
+        console.log('MongoDB connected...');
+    }catch(err){
+        console.error('MongoDB connection failed:', err.message)
+        process.exit(1);
+    }
+} 
+connectDB();
 const userModel = mongoose.Schema({
     firstname: String,
     lastname: String,
