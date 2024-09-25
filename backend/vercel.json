@@ -1,4 +1,5 @@
 {
+    "version": 2,
     "builds": [
         {
             "src": "./script.js",
@@ -8,8 +9,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "script.js"
+            "dest": "./script.js"
         }
     ]
 }
-    
